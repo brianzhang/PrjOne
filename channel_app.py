@@ -9,6 +9,7 @@ def hello_world():
 @app.route('/channel/<id>/')
 def channel_get(id=None):
     if id:
+	id = 'req data: %s' % id
         return render_template("index.html", data=id)
 
 if __name__ == '__main__':  
